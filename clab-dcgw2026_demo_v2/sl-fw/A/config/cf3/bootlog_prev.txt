@@ -1,0 +1,32 @@
+Boot log started
+ERROR: Unsupported configuration.  Cgroup memory limit not set or cgroups not present.
+
+Looking for cf3:/bof.cfg ... OK, reading
+
+Total Memory: 15319MB  Chassis Type: 0x24   [ ref: 9275d52f21d3; ]  Feature Flags: 00000800
+*** Runtime feature override: STORE_DEBUG_BACKTRACE = OFF
+TiMOS-B-25.7.R1 both/x86_64 Nokia 7750 SR Copyright (c) 2000-2025 Nokia.
+All rights reserved. All use subject to applicable license agreements.
+Built on Wed Jul 16 21:13:09 UTC 2025 by builder in /builds/257B/R1/panos/main/srux
+
+Scheduler: using fair scheduler policy
+
+
+   ___                    ___           ___           ___
+  /\  \                  /\__\         /\  \         /\  \
+  \:\  \        ___     /::|  |       /::\  \       /::\  \
+   \:\  \      /\__\   /:|:|  |      /:/\:\  \     /:/\:\  \
+   /::\  \    _\/__/  /:/|:|__|__   /:/  \:\  \   _\:\~\:\  \
+  /:/\:\__\  /\__\   /:/ |::::\__\ /:/__/ \:\__\ /\ \:\ \:\__\
+ /:/  \/__/ /:/  /   \/__/~~/:/  / \:\  \ /:/  / \:\ \:\ \/__/
+/:/  /     /:/  /          /:/  /   \:\  /:/  /   \:\ \:\__\
+\/__/      \/__/          /:/  /     \:\/:/  /     \:\/:/  /
+                         /:/  /       \::/  /       \::/  /
+                         \/__/         \/__/         \/__/
+
+Running 64 bit architecture
+
+Time from clock is Thu Feb 26 11:10:04 2026 UTC
+Initial DNS resolving preference is ipv6-first
+
+Looking for cf3:/bof.cfg ... OK, reading

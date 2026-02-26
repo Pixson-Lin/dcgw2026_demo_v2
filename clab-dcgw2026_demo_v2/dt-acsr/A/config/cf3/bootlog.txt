@@ -1,0 +1,82 @@
+Boot log started
+ERROR: Unsupported configuration.  Cgroup memory limit not set or cgroups not present.
+
+Looking for cf3:/bof.cfg ... OK, reading
+
+Total Memory: 15319MB  Chassis Type: 0x24   [ ref: 9275d52f21d3; ]  Feature Flags: 00000800
+*** Runtime feature override: STORE_DEBUG_BACKTRACE = OFF
+TiMOS-B-25.7.R1 both/x86_64 Nokia 7750 SR Copyright (c) 2000-2025 Nokia.
+All rights reserved. All use subject to applicable license agreements.
+Built on Wed Jul 16 21:13:09 UTC 2025 by builder in /builds/257B/R1/panos/main/srux
+
+Scheduler: using fair scheduler policy
+
+
+   ___                    ___           ___           ___
+  /\  \                  /\__\         /\  \         /\  \
+  \:\  \        ___     /::|  |       /::\  \       /::\  \
+   \:\  \      /\__\   /:|:|  |      /:/\:\  \     /:/\:\  \
+   /::\  \    _\/__/  /:/|:|__|__   /:/  \:\  \   _\:\~\:\  \
+  /:/\:\__\  /\__\   /:/ |::::\__\ /:/__/ \:\__\ /\ \:\ \:\__\
+ /:/  \/__/ /:/  /   \/__/~~/:/  / \:\  \ /:/  / \:\ \:\ \/__/
+/:/  /     /:/  /          /:/  /   \:\  /:/  /   \:\ \:\__\
+\/__/      \/__/          /:/  /     \:\/:/  /     \:\/:/  /
+                         /:/  /       \::/  /       \::/  /
+                         \/__/         \/__/         \/__/
+
+Running 64 bit architecture
+
+Time from clock is Thu Feb 26 11:11:44 2026 UTC
+Initial DNS resolving preference is ipv6-first
+
+Looking for cf3:/bof.cfg ... OK, reading
+
+Current Time: Thu Feb 26 11:11:50 UTC 2026
+Loading TiMOS License for 'TiMOS-B-25.7.R1' from location:
+   'cf3:\license.txt' ... OK
+
+Loading primary configuration file "cf3:\config.cfg"
+Loaded 388 lines in 0.1 seconds from file "cf3:\config.cfg"
+Committing configuration ... finished in 0.0 seconds
+
+TiMOS-B-25.7.R1 both/x86_64 Nokia 7750 SR Copyright (c) 2000-2025 Nokia.
+All rights reserved. All use subject to applicable license agreements.
+Built on Wed Jul 16 21:13:09 UTC 2025 by builder in /builds/257B/R1/panos/main/srux
+
+
+................................................................
+:                  Welcome to Nokia SR-OS!                     :
+:                                                              :
+:                                                              :
+: YANG:          https://yang.labctl.net/                      :
+: Community:     https://containerlab.dev/community/           :
+: Discord:       https://containerlab.dev/discord/             :
+................................................................
+
+Login: 012 s 02/26/26 11:11:53.320: 
+tRootTask: Assertion "nodeBlockList.size() != 0" failed
+   File: iom/tree.cpp  Line: 3375  Function: allocateNodes
+   Message: "Failed initial allocate"
+   Stack Trace:
+     0x0000000002799670,  libunwind_backtrace + 496
+     0x0000000002799704,  fillStackArray + 132
+     0x000000000279984B,  stackBackTracePrint + 27
+     0x000000000279989E,  stackBackTrace + 14
+     0x00000000029D05C6,  timosAssertCanReturn + 454
+     0x00000000029D0842,  timosAssertCanReturnVaList + 82
+     0x00000000029D08C8,  timosAssert + 120
+     0x000000000425C6AB,  RouteTreeNodeMgr::allocateNodes(unsigned int) + 475
+     0x00000000042636C1,  RouteTreeNodeMgr::RouteTreeNodeMgr() + 113
+     0x000000000406436E,  IOM_IP::initialise_routing_tables(unsigned int, IOM_COMPLEX*, bool) + 910
+     0x0000000003E72D1B,  IOM_IP::IOM_IP(IOM_IP**, unsigned int, unsigned int) + 15675
+     0x000000000463E172,  FP_IOM_IP::FP_IOM_IP(IOM_IP**, unsigned int, unsigned int) + 34
+     0x000000000463E363,  IOM_IP_FACTORY::alloc_fp_object(IOM_IP**, unsigned int, unsigned int) + 51
+     0x0000000003E1D96D,  IOM_IP_FACTORY::alloc_object(IOM_IP**, unsigned int, unsigned int) + 45
+     0x0000000003D7F524,  IOM_INFO::IOM_INFO(unsigned int, unsigned int, bool) + 212
+     0x0000000004645284,  FP_IOM_INFO::FP_IOM_INFO(unsigned int, unsigned int, bool) + 20
+     0x00000000046452D1,  IOM_INFO_FACTORY::alloc_fp_object(unsigned int, unsigned int, bool) + 49
+     0x0000000003D37668,  IOM_INFO_FACTORY::alloc_object(unsigned int, unsigned int, bool) + 56
+     0x0000000003D5095A,  iom_start_tasks(bool) + 490
+     0x0000000003D5309D,  pnIomMain + 605
+     0x00000000005FA475,  pnMainPrivate + 5205
+     0x000000000CBC2698,  pthreadCreateHandler + 968

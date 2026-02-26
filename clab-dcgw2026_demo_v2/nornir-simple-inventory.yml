@@ -1,0 +1,81 @@
+---
+dt-ipcam:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.17
+tl-car:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.11
+dt-acsr:
+    username: admin
+    password: NokiaSros1!
+    platform: nokia_srsim
+    hostname: 172.20.20.4
+dt-mec:
+    username: admin
+    password: NokiaSros1!
+    platform: nokia_srsim
+    hostname: 172.20.20.16
+sl-acsr:
+    username: admin
+    password: NokiaSros1!
+    platform: nokia_srsim
+    hostname: 172.20.20.12
+sl-farm:
+    username: admin
+    password: NokiaSros1!
+    platform: nokia_srsim
+    hostname: 172.20.20.10
+sl-fw:
+    username: admin
+    password: NokiaSros1!
+    platform: nokia_srsim
+    hostname: 172.20.20.14
+sl-nb1:
+    username: admin
+    password: NokiaSros1!
+    platform: nokia_srsim
+    hostname: 172.20.20.9
+sl-nb2:
+    username: admin
+    password: NokiaSros1!
+    platform: nokia_srsim
+    hostname: 172.20.20.15
+sl-rtsp:
+    username: admin
+    password: NokiaSros1!
+    platform: nokia_srsim
+    hostname: 172.20.20.13
+tl-acsr:
+    username: admin
+    password: NokiaSros1!
+    platform: nokia_srsim
+    hostname: 172.20.20.3
+tl-mec:
+    username: admin
+    password: NokiaSros1!
+    platform: nokia_srsim
+    hostname: 172.20.20.6
+tnyk-dcgw-a:
+    username: admin
+    password: NokiaSros1!
+    platform: nokia_srsim
+    hostname: 172.20.20.2
+tnyk-farm:
+    username: admin
+    password: NokiaSros1!
+    platform: nokia_srsim
+    hostname: 172.20.20.7
+tpe7-dcgw-a:
+    username: admin
+    password: NokiaSros1!
+    platform: nokia_srsim
+    hostname: 172.20.20.8
+tpe7-farm:
+    username: admin
+    password: NokiaSros1!
+    platform: nokia_srsim
+    hostname: 172.20.20.5

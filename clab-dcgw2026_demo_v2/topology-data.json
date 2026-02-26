@@ -1,0 +1,754 @@
+{
+  "name": "dcgw2026_demo_v2",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-fcab017bdca4",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "mtu": 1500,
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": ["ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLRpKTPmjJWZpR0YUY6M9ynyi5WErLd3TFUCmWiKM57aEFQ4NaQlfOY6p/cluJ2yBcZbDDfd1hUNbe+oV4Guuq0=","ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDBnCeZ5KnsuBHODeUjOjIuACoTQlu8VPcUUVmYze/P8rbIwmcfWgSuZ+cfickuL62wAe6rp0Y402RJ/LF2rA4Fli349GAlyWEj0tAoYuT3+4IB+Kg5JBMHTO9hoR+swnnyFg5WjwFt9KH/98FGANyJjjagViAuyZj8CzD98pduDiHlVGSWBdxsC35Z713StZjYZXtuJM+hyJFCm7lbv8jLt2Sn/UgqIPLaTqnp/laQ2ewLe8wt/DOLdki6G7qlqE+WS7VuFLGL3X7V5q1O2kOguZkPq/g7/DnWfBsWkTrNSFP0LvzAb5e1f6qsOIrVHGkl6jT5w6uCD3aEWchDQbsyCj62mCMJuy9auff7vSaQQn+qhNKRv2meqK1v7l0cKuKaoT6rdw3bYt4FlfWEUo1vc/IbvM/WZNBbRc9Drc84ITk0uHszLpAkl+opaFNuxFFNRkg3Ail63JlS7/OhAsSuuE9s2voWFztr/WqquyfDkaYm3hOArbgVoNPAk/g0IUH0YPI737Ooiyk9vQmhYDKbJI+kuXWSn3GZHi1c8ozwkfZetPdg9pZ22qFPFgdBRrJRogFT3ahk9dbUxeV1dN27OYQ7fbA3aXJdyrCNIa2s6NchemFy6Kf/EcrfUtb7S6ck0OKTGYu4Kob/c22gT+J5y4uKrX5moVfFKEtAqNPnDQ=="],
+  "nodes": {
+    "dt-acsr": {
+      "index": "0",
+      "shortname": "dt-acsr",
+      "longname": "clab-dcgw2026_demo_v2-dt-acsr",
+      "fqdn": "dt-acsr.dcgw2026_demo_v2.io",
+      "group": "",
+      "labdir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/dt-acsr",
+      "kind": "nokia_srsim",
+      "image": "nokia_srsim:25.7.R1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1c:d7:00:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-fcab017bdca4",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srsim",
+        "clab-node-lab-dir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/dt-acsr",
+        "clab-node-longname": "clab-dcgw2026_demo_v2-dt-acsr",
+        "clab-node-name": "dt-acsr",
+        "clab-node-type": "SR-1",
+        "clab-owner": "clab",
+        "clab-topo-file": "/home/clab/clabs/dcgw2026_demo_v2/dcgw2026_demo_v2.clab.yml",
+        "containerlab": "dcgw2026_demo_v2"
+      },
+      "port-bindings": [
+      ]
+    },
+    "dt-ipcam": {
+      "index": "1",
+      "shortname": "dt-ipcam",
+      "longname": "clab-dcgw2026_demo_v2-dt-ipcam",
+      "fqdn": "dt-ipcam.dcgw2026_demo_v2.io",
+      "group": "",
+      "labdir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/dt-ipcam",
+      "kind": "linux",
+      "image": "ghcr.io/hellt/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.17",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::11",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-fcab017bdca4",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/dt-ipcam",
+        "clab-node-longname": "clab-dcgw2026_demo_v2-dt-ipcam",
+        "clab-node-name": "dt-ipcam",
+        "clab-node-type": "",
+        "clab-owner": "clab",
+        "clab-topo-file": "/home/clab/clabs/dcgw2026_demo_v2/dcgw2026_demo_v2.clab.yml",
+        "containerlab": "dcgw2026_demo_v2"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "dt-mec": {
+      "index": "2",
+      "shortname": "dt-mec",
+      "longname": "clab-dcgw2026_demo_v2-dt-mec",
+      "fqdn": "dt-mec.dcgw2026_demo_v2.io",
+      "group": "",
+      "labdir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/dt-mec",
+      "kind": "nokia_srsim",
+      "image": "nokia_srsim:25.7.R1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.16",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::10",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1c:97:02:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-fcab017bdca4",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srsim",
+        "clab-node-lab-dir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/dt-mec",
+        "clab-node-longname": "clab-dcgw2026_demo_v2-dt-mec",
+        "clab-node-name": "dt-mec",
+        "clab-node-type": "SR-1",
+        "clab-owner": "clab",
+        "clab-topo-file": "/home/clab/clabs/dcgw2026_demo_v2/dcgw2026_demo_v2.clab.yml",
+        "containerlab": "dcgw2026_demo_v2"
+      },
+      "port-bindings": [
+      ]
+    },
+    "sl-acsr": {
+      "index": "3",
+      "shortname": "sl-acsr",
+      "longname": "clab-dcgw2026_demo_v2-sl-acsr",
+      "fqdn": "sl-acsr.dcgw2026_demo_v2.io",
+      "group": "",
+      "labdir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/sl-acsr",
+      "kind": "nokia_srsim",
+      "image": "nokia_srsim:25.7.R1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.12",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::c",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1c:33:03:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-fcab017bdca4",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srsim",
+        "clab-node-lab-dir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/sl-acsr",
+        "clab-node-longname": "clab-dcgw2026_demo_v2-sl-acsr",
+        "clab-node-name": "sl-acsr",
+        "clab-node-type": "SR-1",
+        "clab-owner": "clab",
+        "clab-topo-file": "/home/clab/clabs/dcgw2026_demo_v2/dcgw2026_demo_v2.clab.yml",
+        "containerlab": "dcgw2026_demo_v2"
+      },
+      "port-bindings": [
+      ]
+    },
+    "sl-farm": {
+      "index": "4",
+      "shortname": "sl-farm",
+      "longname": "clab-dcgw2026_demo_v2-sl-farm",
+      "fqdn": "sl-farm.dcgw2026_demo_v2.io",
+      "group": "",
+      "labdir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/sl-farm",
+      "kind": "nokia_srsim",
+      "image": "nokia_srsim:25.7.R1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.10",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::a",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1c:c8:04:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-fcab017bdca4",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srsim",
+        "clab-node-lab-dir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/sl-farm",
+        "clab-node-longname": "clab-dcgw2026_demo_v2-sl-farm",
+        "clab-node-name": "sl-farm",
+        "clab-node-type": "SR-1",
+        "clab-owner": "clab",
+        "clab-topo-file": "/home/clab/clabs/dcgw2026_demo_v2/dcgw2026_demo_v2.clab.yml",
+        "containerlab": "dcgw2026_demo_v2"
+      },
+      "port-bindings": [
+      ]
+    },
+    "sl-fw": {
+      "index": "5",
+      "shortname": "sl-fw",
+      "longname": "clab-dcgw2026_demo_v2-sl-fw",
+      "fqdn": "sl-fw.dcgw2026_demo_v2.io",
+      "group": "",
+      "labdir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/sl-fw",
+      "kind": "nokia_srsim",
+      "image": "nokia_srsim:25.7.R1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.14",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::e",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1c:1d:05:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-fcab017bdca4",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srsim",
+        "clab-node-lab-dir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/sl-fw",
+        "clab-node-longname": "clab-dcgw2026_demo_v2-sl-fw",
+        "clab-node-name": "sl-fw",
+        "clab-node-type": "SR-1",
+        "clab-owner": "clab",
+        "clab-topo-file": "/home/clab/clabs/dcgw2026_demo_v2/dcgw2026_demo_v2.clab.yml",
+        "containerlab": "dcgw2026_demo_v2"
+      },
+      "port-bindings": [
+      ]
+    },
+    "sl-nb1": {
+      "index": "6",
+      "shortname": "sl-nb1",
+      "longname": "clab-dcgw2026_demo_v2-sl-nb1",
+      "fqdn": "sl-nb1.dcgw2026_demo_v2.io",
+      "group": "",
+      "labdir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/sl-nb1",
+      "kind": "nokia_srsim",
+      "image": "nokia_srsim:25.7.R1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.9",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::9",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1c:db:06:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-fcab017bdca4",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srsim",
+        "clab-node-lab-dir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/sl-nb1",
+        "clab-node-longname": "clab-dcgw2026_demo_v2-sl-nb1",
+        "clab-node-name": "sl-nb1",
+        "clab-node-type": "SR-1",
+        "clab-owner": "clab",
+        "clab-topo-file": "/home/clab/clabs/dcgw2026_demo_v2/dcgw2026_demo_v2.clab.yml",
+        "containerlab": "dcgw2026_demo_v2"
+      },
+      "port-bindings": [
+      ]
+    },
+    "sl-nb2": {
+      "index": "7",
+      "shortname": "sl-nb2",
+      "longname": "clab-dcgw2026_demo_v2-sl-nb2",
+      "fqdn": "sl-nb2.dcgw2026_demo_v2.io",
+      "group": "",
+      "labdir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/sl-nb2",
+      "kind": "nokia_srsim",
+      "image": "nokia_srsim:25.7.R1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.15",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::f",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1c:5e:07:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-fcab017bdca4",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srsim",
+        "clab-node-lab-dir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/sl-nb2",
+        "clab-node-longname": "clab-dcgw2026_demo_v2-sl-nb2",
+        "clab-node-name": "sl-nb2",
+        "clab-node-type": "SR-1",
+        "clab-owner": "clab",
+        "clab-topo-file": "/home/clab/clabs/dcgw2026_demo_v2/dcgw2026_demo_v2.clab.yml",
+        "containerlab": "dcgw2026_demo_v2"
+      },
+      "port-bindings": [
+      ]
+    },
+    "sl-rtsp": {
+      "index": "8",
+      "shortname": "sl-rtsp",
+      "longname": "clab-dcgw2026_demo_v2-sl-rtsp",
+      "fqdn": "sl-rtsp.dcgw2026_demo_v2.io",
+      "group": "",
+      "labdir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/sl-rtsp",
+      "kind": "nokia_srsim",
+      "image": "nokia_srsim:25.7.R1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.13",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::d",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1c:c4:08:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-fcab017bdca4",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srsim",
+        "clab-node-lab-dir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/sl-rtsp",
+        "clab-node-longname": "clab-dcgw2026_demo_v2-sl-rtsp",
+        "clab-node-name": "sl-rtsp",
+        "clab-node-type": "SR-1",
+        "clab-owner": "clab",
+        "clab-topo-file": "/home/clab/clabs/dcgw2026_demo_v2/dcgw2026_demo_v2.clab.yml",
+        "containerlab": "dcgw2026_demo_v2"
+      },
+      "port-bindings": [
+      ]
+    },
+    "tl-acsr": {
+      "index": "9",
+      "shortname": "tl-acsr",
+      "longname": "clab-dcgw2026_demo_v2-tl-acsr",
+      "fqdn": "tl-acsr.dcgw2026_demo_v2.io",
+      "group": "",
+      "labdir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/tl-acsr",
+      "kind": "nokia_srsim",
+      "image": "nokia_srsim:25.7.R1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1c:78:09:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-fcab017bdca4",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srsim",
+        "clab-node-lab-dir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/tl-acsr",
+        "clab-node-longname": "clab-dcgw2026_demo_v2-tl-acsr",
+        "clab-node-name": "tl-acsr",
+        "clab-node-type": "SR-1",
+        "clab-owner": "clab",
+        "clab-topo-file": "/home/clab/clabs/dcgw2026_demo_v2/dcgw2026_demo_v2.clab.yml",
+        "containerlab": "dcgw2026_demo_v2"
+      },
+      "port-bindings": [
+      ]
+    },
+    "tl-car": {
+      "index": "10",
+      "shortname": "tl-car",
+      "longname": "clab-dcgw2026_demo_v2-tl-car",
+      "fqdn": "tl-car.dcgw2026_demo_v2.io",
+      "group": "",
+      "labdir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/tl-car",
+      "kind": "linux",
+      "image": "ghcr.io/hellt/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.11",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::b",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-fcab017bdca4",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/tl-car",
+        "clab-node-longname": "clab-dcgw2026_demo_v2-tl-car",
+        "clab-node-name": "tl-car",
+        "clab-node-type": "",
+        "clab-owner": "clab",
+        "clab-topo-file": "/home/clab/clabs/dcgw2026_demo_v2/dcgw2026_demo_v2.clab.yml",
+        "containerlab": "dcgw2026_demo_v2"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "tl-mec": {
+      "index": "11",
+      "shortname": "tl-mec",
+      "longname": "clab-dcgw2026_demo_v2-tl-mec",
+      "fqdn": "tl-mec.dcgw2026_demo_v2.io",
+      "group": "",
+      "labdir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/tl-mec",
+      "kind": "nokia_srsim",
+      "image": "nokia_srsim:25.7.R1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::6",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1c:67:0b:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-fcab017bdca4",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srsim",
+        "clab-node-lab-dir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/tl-mec",
+        "clab-node-longname": "clab-dcgw2026_demo_v2-tl-mec",
+        "clab-node-name": "tl-mec",
+        "clab-node-type": "SR-1",
+        "clab-owner": "clab",
+        "clab-topo-file": "/home/clab/clabs/dcgw2026_demo_v2/dcgw2026_demo_v2.clab.yml",
+        "containerlab": "dcgw2026_demo_v2"
+      },
+      "port-bindings": [
+      ]
+    },
+    "tnyk-dcgw-a": {
+      "index": "12",
+      "shortname": "tnyk-dcgw-a",
+      "longname": "clab-dcgw2026_demo_v2-tnyk-dcgw-a",
+      "fqdn": "tnyk-dcgw-a.dcgw2026_demo_v2.io",
+      "group": "",
+      "labdir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/tnyk-dcgw",
+      "kind": "nokia_srsim",
+      "image": "nokia_srsim:25.7.R1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1c:15:0c:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-fcab017bdca4",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srsim",
+        "clab-node-lab-dir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/tnyk-dcgw",
+        "clab-node-longname": "clab-dcgw2026_demo_v2-tnyk-dcgw",
+        "clab-node-name": "tnyk-dcgw",
+        "clab-node-type": "SR-1-46S",
+        "clab-owner": "clab",
+        "clab-topo-file": "/home/clab/clabs/dcgw2026_demo_v2/dcgw2026_demo_v2.clab.yml",
+        "containerlab": "dcgw2026_demo_v2"
+      },
+      "port-bindings": [
+      ]
+    },
+    "tnyk-farm": {
+      "index": "13",
+      "shortname": "tnyk-farm",
+      "longname": "clab-dcgw2026_demo_v2-tnyk-farm",
+      "fqdn": "tnyk-farm.dcgw2026_demo_v2.io",
+      "group": "",
+      "labdir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/tnyk-farm",
+      "kind": "nokia_srsim",
+      "image": "nokia_srsim:25.7.R1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::7",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1c:96:0d:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-fcab017bdca4",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srsim",
+        "clab-node-lab-dir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/tnyk-farm",
+        "clab-node-longname": "clab-dcgw2026_demo_v2-tnyk-farm",
+        "clab-node-name": "tnyk-farm",
+        "clab-node-type": "SR-1",
+        "clab-owner": "clab",
+        "clab-topo-file": "/home/clab/clabs/dcgw2026_demo_v2/dcgw2026_demo_v2.clab.yml",
+        "containerlab": "dcgw2026_demo_v2"
+      },
+      "port-bindings": [
+      ]
+    },
+    "tpe7-dcgw-a": {
+      "index": "14",
+      "shortname": "tpe7-dcgw-a",
+      "longname": "clab-dcgw2026_demo_v2-tpe7-dcgw-a",
+      "fqdn": "tpe7-dcgw-a.dcgw2026_demo_v2.io",
+      "group": "",
+      "labdir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/tpe7-dcgw",
+      "kind": "nokia_srsim",
+      "image": "nokia_srsim:25.7.R1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.8",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::8",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1c:a0:0e:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-fcab017bdca4",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srsim",
+        "clab-node-lab-dir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/tpe7-dcgw",
+        "clab-node-longname": "clab-dcgw2026_demo_v2-tpe7-dcgw",
+        "clab-node-name": "tpe7-dcgw",
+        "clab-node-type": "SR-1-46S",
+        "clab-owner": "clab",
+        "clab-topo-file": "/home/clab/clabs/dcgw2026_demo_v2/dcgw2026_demo_v2.clab.yml",
+        "containerlab": "dcgw2026_demo_v2"
+      },
+      "port-bindings": [
+      ]
+    },
+    "tpe7-farm": {
+      "index": "15",
+      "shortname": "tpe7-farm",
+      "longname": "clab-dcgw2026_demo_v2-tpe7-farm",
+      "fqdn": "tpe7-farm.dcgw2026_demo_v2.io",
+      "group": "",
+      "labdir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/tpe7-farm",
+      "kind": "nokia_srsim",
+      "image": "nokia_srsim:25.7.R1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1c:0b:0f:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-fcab017bdca4",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srsim",
+        "clab-node-lab-dir": "/home/clab/clabs/dcgw2026_demo_v2/clab-dcgw2026_demo_v2/tpe7-farm",
+        "clab-node-longname": "clab-dcgw2026_demo_v2-tpe7-farm",
+        "clab-node-name": "tpe7-farm",
+        "clab-node-type": "SR-1",
+        "clab-owner": "clab",
+        "clab-topo-file": "/home/clab/clabs/dcgw2026_demo_v2/dcgw2026_demo_v2.clab.yml",
+        "containerlab": "dcgw2026_demo_v2"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "tl-mec",
+        "interface": "e1-1-c2-1",
+        "mac": "aa:c1:ab:dd:d9:a1",
+        "peer": "z"
+      },
+      "z": {
+        "node": "tl-car",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:35:d1:be",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "tl-mec",
+        "interface": "e1-1-c1-1",
+        "mac": "aa:c1:ab:2c:89:49",
+        "peer": "z"
+      },
+      "z": {
+        "node": "tl-acsr",
+        "interface": "e1-1-c1-1",
+        "mac": "aa:c1:ab:cd:82:cc",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "tl-acsr",
+        "interface": "e1-1-c2-1",
+        "mac": "aa:c1:ab:a3:0f:8e",
+        "peer": "z"
+      },
+      "z": {
+        "node": "tpe7-dcgw-a",
+        "interface": "e1-1-c21-1",
+        "mac": "aa:c1:ab:ca:d1:d6",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "tpe7-dcgw-a",
+        "interface": "e1-1-c22-1",
+        "mac": "aa:c1:ab:e0:40:0a",
+        "peer": "z"
+      },
+      "z": {
+        "node": "tpe7-farm",
+        "interface": "e1-1-c1-1",
+        "mac": "aa:c1:ab:71:b6:24",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "tnyk-dcgw-a",
+        "interface": "e1-1-c22-1",
+        "mac": "aa:c1:ab:d1:f9:de",
+        "peer": "z"
+      },
+      "z": {
+        "node": "tnyk-farm",
+        "interface": "e1-1-c1-1",
+        "mac": "aa:c1:ab:b2:26:82",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "tnyk-dcgw-a",
+        "interface": "e1-1-c21-1",
+        "mac": "aa:c1:ab:86:1e:5f",
+        "peer": "z"
+      },
+      "z": {
+        "node": "dt-acsr",
+        "interface": "e1-1-c2-1",
+        "mac": "aa:c1:ab:a7:1e:fb",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "dt-acsr",
+        "interface": "e1-1-c1-1",
+        "mac": "aa:c1:ab:93:98:9f",
+        "peer": "z"
+      },
+      "z": {
+        "node": "dt-mec",
+        "interface": "e1-1-c1-1",
+        "mac": "aa:c1:ab:03:15:3e",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "dt-ipcam",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:38:6f:d5",
+        "peer": "z"
+      },
+      "z": {
+        "node": "dt-mec",
+        "interface": "e1-1-c2-1",
+        "mac": "aa:c1:ab:f7:1b:56",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "sl-acsr",
+        "interface": "e1-1-c2-1",
+        "mac": "aa:c1:ab:0d:38:4f",
+        "peer": "z"
+      },
+      "z": {
+        "node": "tnyk-dcgw-a",
+        "interface": "e1-1-c23-1",
+        "mac": "aa:c1:ab:2a:1c:b5",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "sl-acsr",
+        "interface": "e1-1-c3-1",
+        "mac": "aa:c1:ab:d1:86:26",
+        "peer": "z"
+      },
+      "z": {
+        "node": "sl-farm",
+        "interface": "e1-1-c1-1",
+        "mac": "aa:c1:ab:85:07:54",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "sl-acsr",
+        "interface": "e1-1-c1-1",
+        "mac": "aa:c1:ab:3f:50:ce",
+        "peer": "z"
+      },
+      "z": {
+        "node": "sl-fw",
+        "interface": "e1-1-c1-1",
+        "mac": "aa:c1:ab:c4:51:1c",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "sl-acsr",
+        "interface": "e1-1-c4-1",
+        "mac": "aa:c1:ab:db:21:06",
+        "peer": "z"
+      },
+      "z": {
+        "node": "sl-nb1",
+        "interface": "e1-1-c1-1",
+        "mac": "aa:c1:ab:32:e4:c1",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "sl-acsr",
+        "interface": "e1-1-c5-1",
+        "mac": "aa:c1:ab:8f:83:03",
+        "peer": "z"
+      },
+      "z": {
+        "node": "sl-nb2",
+        "interface": "e1-1-c1-1",
+        "mac": "aa:c1:ab:af:f2:9a",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "sl-fw",
+        "interface": "e1-1-c2-1",
+        "mac": "aa:c1:ab:01:2e:78",
+        "peer": "z"
+      },
+      "z": {
+        "node": "sl-rtsp",
+        "interface": "e1-1-c1-1",
+        "mac": "aa:c1:ab:17:d3:a9",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "tnyk-dcgw-a",
+        "interface": "e1-1-c26-1",
+        "mac": "aa:c1:ab:a6:d2:86",
+        "peer": "z"
+      },
+      "z": {
+        "node": "tpe7-dcgw-a",
+        "interface": "e1-1-c26-1",
+        "mac": "aa:c1:ab:f8:77:11",
+        "peer": "a"
+      }
+    }
+  ]
+}

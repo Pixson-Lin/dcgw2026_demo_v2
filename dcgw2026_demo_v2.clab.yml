@@ -1,0 +1,123 @@
+name: "dcgw2026_demo_v2"
+
+topology:
+  kinds:
+    nokia_srsim:
+      license: ../25.x_SR_SIM_License.txt
+      image: nokia_srsim:25.7.R1
+    linux:
+      image: ghcr.io/hellt/network-multitool
+
+  nodes:
+    # 台南永康
+    # 7750 SR-1-46S at TYNK 台南永康
+    tnyk-dcgw:
+      kind: nokia_srsim
+      type: SR-1-46S
+      env :
+        NOKIA_SROS_SYSTEM_BASE_MAC: 1c:58:07:00:00:01 # override Chassis MAC
+      components:
+        - slot: A
+        - slot: 1
+
+    # TNYK-farm at TYNK (7750 SR-1)
+    tnyk-farm:
+      kind: nokia_srsim
+      startup-config: sr-1_init.partial.cfg
+
+    # 台北東七
+    # 7750 SR-1-46S at TPE7 台北東七
+    tpe7-dcgw:
+      kind: nokia_srsim
+      type: SR-1-46S
+      env :
+        NOKIA_SROS_SYSTEM_BASE_MAC: 1c:58:07:01:00:01 # override Chassis MAC
+      components:
+        - slot: A
+        - slot: 1
+
+    # TPE7-farm at TPE7 (7750 SR-1)
+    tpe7-farm:
+      kind: nokia_srsim
+      startup-config: sr-1_init.partial.cfg
+
+    # TL
+    # TL-ACSR at TL (7750 SR-1)
+    tl-acsr:
+      kind: nokia_srsim
+      startup-config: sr-1_init.partial.cfg
+
+    # TL-MEC at TL (7750 SR-1)
+    tl-mec:
+      kind: nokia_srsim
+      startup-config: sr-1_init.partial.cfg
+
+    # TL-CAR at TL (Linux)
+    tl-car:
+      kind: linux
+
+    # 大潭
+    # DT-ACSR at 大潭 (7750 SR-1)
+    dt-acsr:
+      kind: nokia_srsim
+      startup-config: sr-1_init.partial.cfg
+
+    # DT-MEC at 大潭 (7750 SR-1)
+    dt-mec:
+      kind: nokia_srsim
+      startup-config: sr-1_init.partial.cfg
+
+    # DT-IPCAM at 大潭 (Linux)
+    dt-ipcam:
+      kind: linux
+
+    # 沙崙
+    # SL-ACSR at 沙崙 (7750 SR-1)
+    sl-acsr:
+      kind: nokia_srsim
+      startup-config: sr-1_init.partial.cfg
+
+    # SL-FW at 沙崙 (7750 SR-1)
+    sl-fw:
+      kind: nokia_srsim
+      startup-config: sr-1_init.partial.cfg
+
+    # SL-RTSPServer at 沙崙 (7750 SR-1)
+    sl-rtsp:
+      kind: nokia_srsim
+      startup-config: sr-1_init.partial.cfg
+
+    # SL-farm at 沙崙 (7750 SR-1)
+    sl-farm:
+      kind: nokia_srsim
+      startup-config: sr-1_init.partial.cfg
+
+    # SL-NB-1 at 沙崙 (7750 SR-1)
+    sl-nb1:
+      kind: nokia_srsim
+      startup-config: sr-1_init.partial.cfg
+
+    # SL-NB-2 at 沙崙 (7750 SR-1)
+    sl-nb2:
+      kind: nokia_srsim
+      startup-config: sr-1_init.partial.cfg
+
+  links:
+    # Datapath links
+    - endpoints: ["tl-mec:1/1/c2/1", "tl-car:eth1"]
+    - endpoints: ["tl-mec:1/1/c1/1", "tl-acsr:1/1/c1/1"]
+    - endpoints: ["tl-acsr:1/1/c2/1", "tpe7-dcgw:1/1/c21/1"]
+    - endpoints: ["tpe7-dcgw:1/1/c22/1", "tpe7-farm:1/1/c1/1"]
+    - endpoints: ["tnyk-dcgw:1/1/c22/1", "tnyk-farm:1/1/c1/1"]
+    - endpoints: ["tnyk-dcgw:1/1/c21/1", "dt-acsr:1/1/c2/1"]
+    - endpoints: ["dt-acsr:1/1/c1/1", "dt-mec:1/1/c1/1"]
+    - endpoints: ["dt-ipcam:eth1", "dt-mec:1/1/c2/1"]
+    - endpoints: ["sl-acsr:1/1/c2/1", "tnyk-dcgw:1/1/c23/1"]
+    - endpoints: ["sl-acsr:1/1/c3/1", "sl-farm:1/1/c1/1"]
+    - endpoints: ["sl-acsr:1/1/c1/1", "sl-fw:1/1/c1/1"]
+    - endpoints: ["sl-acsr:1/1/c4/1", "sl-nb1:1/1/c1/1"]
+    - endpoints: ["sl-acsr:1/1/c5/1", "sl-nb2:1/1/c1/1"]
+    - endpoints: ["sl-fw:1/1/c2/1", "sl-rtsp:1/1/c1/1"]
+    - endpoints: ["tnyk-dcgw:1/1/c26/1", "tpe7-dcgw:1/1/c26/1"]   # tnyk-dcgw:LAG-100, tpe7-dcgw:LAG-100, 永康東七oAPN
+
+    

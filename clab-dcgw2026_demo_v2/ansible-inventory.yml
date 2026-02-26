@@ -1,0 +1,50 @@
+all:
+  vars:
+    # The generated inventory is assumed to be used from the clab host.
+    # Hence no http proxy should be used. Therefore we make sure the http
+    # module does not attempt using any global http proxy.
+    ansible_httpapi_use_proxy: false
+  children:
+    linux:
+      hosts:
+        clab-dcgw2026_demo_v2-dt-ipcam:
+          ansible_host: 172.20.20.17
+        clab-dcgw2026_demo_v2-tl-car:
+          ansible_host: 172.20.20.11
+    nokia_srsim:
+      vars:
+        ansible_network_os: nokia.sros.md
+        # default connection type for nodes of this kind
+        # feel free to override this in your inventory
+        ansible_connection: ansible.netcommon.network_cli
+        ansible_user: admin
+        ansible_password: NokiaSros1!
+      hosts:
+        clab-dcgw2026_demo_v2-dt-acsr:
+          ansible_host: 172.20.20.4
+        clab-dcgw2026_demo_v2-dt-mec:
+          ansible_host: 172.20.20.16
+        clab-dcgw2026_demo_v2-sl-acsr:
+          ansible_host: 172.20.20.12
+        clab-dcgw2026_demo_v2-sl-farm:
+          ansible_host: 172.20.20.10
+        clab-dcgw2026_demo_v2-sl-fw:
+          ansible_host: 172.20.20.14
+        clab-dcgw2026_demo_v2-sl-nb1:
+          ansible_host: 172.20.20.9
+        clab-dcgw2026_demo_v2-sl-nb2:
+          ansible_host: 172.20.20.15
+        clab-dcgw2026_demo_v2-sl-rtsp:
+          ansible_host: 172.20.20.13
+        clab-dcgw2026_demo_v2-tl-acsr:
+          ansible_host: 172.20.20.3
+        clab-dcgw2026_demo_v2-tl-mec:
+          ansible_host: 172.20.20.6
+        clab-dcgw2026_demo_v2-tnyk-dcgw-a:
+          ansible_host: 172.20.20.2
+        clab-dcgw2026_demo_v2-tnyk-farm:
+          ansible_host: 172.20.20.7
+        clab-dcgw2026_demo_v2-tpe7-dcgw-a:
+          ansible_host: 172.20.20.8
+        clab-dcgw2026_demo_v2-tpe7-farm:
+          ansible_host: 172.20.20.5
