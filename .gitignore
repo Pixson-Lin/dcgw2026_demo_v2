@@ -1,0 +1,6 @@
+# ignore SROS tim file
+*.tim
+
+# ignore SROS licnese file
+license.txt
+license.key
